@@ -43,7 +43,7 @@ async function deleteReport(report){
 }
 function notify(message){document.querySelector('.toast')?.remove();const toast=document.createElement('div');toast.className='toast';toast.setAttribute('role','status');toast.textContent=message;document.body.append(toast);setTimeout(()=>toast.remove(),6000)}
 function published(){return data.reports.filter(r=>r.published)}
-function header(){return `<header><div class="brand"><a class="seal" href="index.html" aria-label="CSC home"><img src="assets/csc-logo.png" alt="Central Student Council logo" width="44" height="66"></a><a class="wordmark" href="index.html"><strong>CSC T.R.A.C.E.</strong><small>Transparency, Reporting, Accountability, Communication, and Evaluation</small></a></div>${admin&&signedIn?'<div class="admin-actions header-actions"><button class="primary" data-action="new">New accomplishment</button><button class="icon-button" data-action="logout">Log out</button></div>':''}</header>`}
+function header(){if(!admin)return '';return `<header><div class="brand"><a class="seal" href="index.html" aria-label="CSC home"><img src="assets/csc-logo.png" alt="Central Student Council logo" width="44" height="66"></a><a class="wordmark" href="index.html"><strong>CSC T.R.A.C.E.</strong><small>Transparency, Reporting, Accountability, Communication, and Evaluation</small></a></div>${admin&&signedIn?'<div class="admin-actions header-actions"><button class="primary" data-action="new">New accomplishment</button><button class="icon-button" data-action="logout">Log out</button></div>':''}</header>`}
 function footer(){return `<footer><strong>CSC T.R.A.C.E.</strong><span>Transparent leadership. Meaningful impact.</span><small>Central Student Council</small></footer>`}
 function render(){
  stopPanorama();
