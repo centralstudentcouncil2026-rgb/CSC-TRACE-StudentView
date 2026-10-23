@@ -2,7 +2,7 @@
   'use strict';
   const origin = 'https://centralstudentcouncil2026-rgb.github.io';
   const portals = Object.freeze({
-    students: Object.freeze({ name: 'Students Access', url: origin + '/CSC-SYNC-PublicView/students-access.html' }),
+    students: Object.freeze({ name: 'Students Access', url: origin + '/CSC-Websites/' }),
     cole: Object.freeze({ name: 'COLE', url: origin + '/CSC-SYNC-Org/cole.html' }),
     officers: Object.freeze({ name: 'CSC Officers', url: origin + '/CSC-SYNC-Admin/csc-officers.html' })
   });
